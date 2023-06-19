@@ -12,6 +12,13 @@ module.exports = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'hero-image': "url('/images/h1_hero.png')",
         'hero2-image': "url('/images/hero_gym.png')",
+        'card1-image': "url('/images/card_1.jpg')",
+        'card2-image': "url('/images/card_2.jpg')",
+        'card3-image': "url('/images/card_3.png')",
+        'card4-image': "url('/images/card_4.png')",
+        'card5-image': "url('/images/card_5.png')",
+        'card-pattern':
+          "linear-gradient(to right bottom, rgba('#7ed56f',0.8), rgba('#28b485',0.8)), url('/images/h1_hero.jpg')",
       },
     },
   },

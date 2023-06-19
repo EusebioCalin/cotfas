@@ -11,7 +11,8 @@ export default function Home() {
         text='Unlock Your Potential and Move Better for Life
 '
       />
-      <Content />
+      {/* <Content image={'/images/card_1.jpg'} imageLeftAlign={true} /> */}
+      {/* <Content image={'/images/card_1.jpg'} imageLeftAlign={false} /> */}
       <SliderHero image={'bg-hero2-image'} text='Why Choose My Personal Training Program?' />
       <Cards />
     </main>
