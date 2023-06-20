@@ -3,30 +3,57 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Disclosure } from '@headlessui/react'
+import { useEffect, useState } from 'react'
 
 const Navbar = () => {
   const navigation = ['Coaching', 'Program', 'FAQS', 'About', 'Contact']
+  const [scrollPosition, setScrollPosition] = useState<number>(0)
 
+  const handleScroll = (event: Event) => {
+    // const nav = document.querySelector('#navbar')
+    // const window = event.currentTarget as Window
+    const position = window.pageYOffset
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop
+
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+
+    const scrolled = winScroll / height
+    console.log('scrolled', scrolled)
+    // this.setState({
+    //   theposition: scrolled,
+    // })
+    setScrollPosition(scrolled)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    ;() => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
-    <div className='w-full'>
-      <nav className='container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0'>
+    <div
+      className={`w-full fixed  top-0 z-10 ${scrollPosition > 0.1 ? 'bg-black' : 'bg-transparent'} 
+      transition duration-500 ease-in-out transform`}
+    >
+      <nav className='container relative flex flex-wrap items-center justify-between p-4 mx-auto lg:justify-between xl:px-0'>
         {/* Logo  */}
         <Disclosure>
           {({ open }) => (
             <>
               <div className='flex flex-wrap items-center justify-between w-full lg:w-auto'>
                 <Link href='/'>
-                  <span className='flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100'>
+                  <span className='flex items-center space-x-2 text-2xl font-medium text-white'>
                     <span>
-                      <Image src='/img/logo.svg' alt='N' width='32' height='32' className='w-8' />
+                      {/* <Image src='/images/logo.jpg' alt='N' width='32' height='32' className='w-8' /> */}
                     </span>
-                    <span>Andrei</span>
+                    <span>Andrei Cotfas</span>
                   </span>
                 </Link>
 
                 <Disclosure.Button
                   aria-label='Toggle Menu'
-                  className='px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700'
+                  className='px-2 py-1 ml-auto text-white rounded-md lg:hidden hover:text-red-600 focus:text-red-600 focus:outline-none'
                 >
                   <svg
                     className='w-6 h-6 fill-current'
@@ -55,14 +82,14 @@ const Navbar = () => {
                       <Link
                         key={index}
                         href='/'
-                        className='w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none'
+                        className='w-full px-6 py-2 rounded-md text-white hover:text-red-600 focus:text-red-600 focus:bg-gray-800 focus:outline-none'
                       >
                         {item}
                       </Link>
                     ))}
                     <Link
                       href='/'
-                      className='w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5'
+                      className='w-full px-6 py-2 mt-3 text-center border-2 border-white bg-red-600 hover:transition-all hover:bg-red-800 text-white rounded-md lg:ml-5'
                     >
                       Get Started
                     </Link>
@@ -80,7 +107,7 @@ const Navbar = () => {
               <li className='mr-3 nav__item' key={index}>
                 <Link
                   href='/'
-                  className='inline-block px-4 py-2 text-lg font-normal text-white-800 no-underline rounded-md hover:text-red-600 focus:text-red-600 focus:outline-none'
+                  className='inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md hover:text-red-600 focus:text-red-600 focus:outline-none'
                 >
                   {menu}
                 </Link>
@@ -92,7 +119,7 @@ const Navbar = () => {
         <div className='hidden mr-3 space-x-4 lg:flex nav__item'>
           <Link
             href='/'
-            className='px-6 py-2 border-solid border-2 border-white-500 bg-red-600 hover:transition-all hover:bg-red-800'
+            className='px-6 py-2 border-solid border-2 border-white rounded-md bg-red-600 hover:transition-all hover:bg-red-800'
           >
             Get Started
           </Link>

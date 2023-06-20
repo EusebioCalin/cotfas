@@ -3,69 +3,72 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --color-primary: #dc2626;
-  --color-primary-hover: #991b1b;
-  --color-secondary: 111 114 185;
-}
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  /* --color-primary: #dc2626; */
+  /* --color-primary-hover: #991b1b; */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --color-primary: #EE4540;
+  --color-secondary: #C72C41;
+  --color-ternary: #801336;
+  --color-4: #510A32;
+  --color-5: #2D142C;
+  /* --color-secondary: 111 114 185; */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
+  /* background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), var(--color-primary-hover), rgb(var(--background-start-rgb))); */
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 
-.cards-wrapper {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4rem;
-  padding: 4rem;
-  margin: 0 auto;
-  width: max-content;
+.show-anim {
+  position: relative;
+  animation: rev-show-main 2s ease forwards;
 }
 
-/* MEDIA QUERIES */
-@media screen and (max-width: 1285px) {
-  .cards-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
+.show-anim:after {
+  content: " ";
+  position: absolute;
+  animation: rev-show-block 2s ease forwards;
+  background: var(--color-primary);
+  left: 0%;
+  top: 0%;
+  width: 0%;
+  height: 100%;
 }
 
-@media screen and (max-width: 900px) {
-  .cards-wrapper {
-    grid-template-columns: 1fr;
+@keyframes rev-show-main {
+  0% {
+    color: transparent;
   }
 
-  .info {
-    justify-content: center;
+  49% {
+    color: transparent;
   }
 
-  .card-grid-space .num {
-    /margin-left: 0;
-    /text-align: center;
+  50% {
+    color: #000;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .cards-wrapper {
-    padding: 4rem 2rem;
+@keyframes rev-show-block {
+  0% {
+    left: 0%;
+    width: 0%;
   }
 
-  .card {
-    max-width: calc(100vw - 4rem);
+  50% {
+    left: 0%;
+    width: 100%;
+  }
+
+  100% {
+    left: 100%;
+    width: 0%;
   }
 }

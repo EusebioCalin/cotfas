@@ -18,8 +18,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header>
           <Navbar />
         </header>
-
-        <nav></nav>
         {children}
         <footer>
           <Footer />

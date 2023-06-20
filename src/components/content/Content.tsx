@@ -1,39 +1,37 @@
+import Image from 'next/image'
+import text from '@/utils/en-US.json'
 import Card from '../Card'
 
-export const Content = ({
-  image,
-  imageLeftAlign = false,
-}: {
-  image: string
-  imageLeftAlign?: boolean
-}) => {
+const imageStyle = {
+  borderRadius: '50%',
+  border: '1px solid #fff',
+}
+
+export const Content = () => {
   return (
     <>
-      <section className='w-full text-right'>
-        <div
-          className='m-h-96 min-h-[600px] flex'
-          style={{ flexDirection: imageLeftAlign ? 'row' : 'row-reverse' }}
-        >
-          <div className='w-1/2 h-6'>
-            <div
-              style={{ backgroundImage: `url(${image})` }}
-              className={`w-96 h-96 bg-cover bg-center 
-        shadow-lg shadow-red-600`}
-            ></div>
-          </div>
-          <div className='top-1/2 mt-1/2 w-1/2 h-6'>
-            <p className='leading-8 uppercase text-xl'>
-              Are you ready to take your fitness journey to the next level? Look no further! I'm
-              Andrei Cotfas, a former professional football player turned personal trainer, and I'm
-              here to guide you towards a healthier, stronger, and more vibrant life.
+      <section className='w-full text-center'>
+        <div className='my-24 flex flex-col content-center items-center'>
+          <h1 className='font-semibold leading-8 uppercase text-3xl'>About me</h1>
+
+          <div className='my-16 mx-4 md:mx-0 md:w-2/3 leading-5 uppercase text-lg'>
+            <p>
+              I'm Andrei Cotfas, a former professional football player turned personal trainer, and
+              I'm here to guide you towards a healthier, stronger, and more vibrant life.
             </p>
           </div>
-        </div>
-      </section>
-      {/* <section className='w-full text-right'>
-        <div className='m-h-96 min-h-[600px] flex'>
-          <div className='top-1/2 mt-1/2 w-1/2 h-6'>
-            <p className='leading-8 uppercase text-xl'>
+
+          <div className='w-full flex flex-col md:grid content-center items-center gap-8 lg:p-4 grid-cols-1 md:grid-cols-2 '>
+            <Card image={'/images/card_1.jpg'} />
+            <Card image={'/images/card_2.jpg'} />
+            <Card image={'/images/card_3.png'} />
+            <div className='hidden md:block'>
+              <Card image={'/images/card_4.png'} />
+            </div>
+          </div>
+
+          <div className='my-16 mx-4 md:mx-0 md:w-2/3 w-2/3 leading-5 uppercase text-lg'>
+            <p>
               Drawing upon my extensive experience in professional sports and my education in sports
               science, I have developed a training philosophy that focuses on enhancing your overall
               movement patterns, helping you move better and feel better for the years to come. Gone
@@ -42,7 +40,7 @@ export const Content = ({
             </p>
           </div>
         </div>
-      </section> */}
+      </section>
     </>
   )
 }
