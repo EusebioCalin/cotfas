@@ -22,7 +22,7 @@ export const Content = () => {
             </p>
           </div>
 
-          <div className='w-full flex flex-col md:grid content-center items-center gap-8 lg:p-4 grid-cols-1 md:grid-cols-2 '>
+          <div className='w-full flex flex-col md:grid content-center items-center gap-8 grid-cols-1 md:grid-cols-2 md:place-items-center'>
             <Image
               src='/images/gallery_1.jpg'
               width={500}
@@ -54,10 +54,6 @@ export const Content = () => {
             science, I have developed a training philosophy that focuses on enhancing your overall
             movement patterns, helping you move better and feel better for the years to come. Gone
             are the days of aimlessly chasing aesthetics or short-term results.{'  '}
-          </p>
-
-          <p className='eading-5 uppercase text-lg font-semibold text-color-secondary'>
-            It's time to invest in your long-term well-being.
           </p>
         </div>
       </section>
