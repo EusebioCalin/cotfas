@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <div
       className={`w-full fixed  top-0 z-10 ${scrollPosition > 0.1 ? 'bg-black' : 'bg-transparent'} 
-      transition duration-500 ease-in-out transform`}
+      transition duration-500 ease-in-out transform hover:bg-black`}
     >
       <nav className='container relative flex flex-wrap items-center justify-between p-4 mx-auto lg:justify-between xl:px-0'>
         {/* Logo  */}
