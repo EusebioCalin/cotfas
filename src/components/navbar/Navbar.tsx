@@ -10,18 +10,9 @@ const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState<number>(0)
 
   const handleScroll = (event: Event) => {
-    // const nav = document.querySelector('#navbar')
-    // const window = event.currentTarget as Window
-    const position = window.pageYOffset
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop
-
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-
     const scrolled = winScroll / height
-    console.log('scrolled', scrolled)
-    // this.setState({
-    //   theposition: scrolled,
-    // })
     setScrollPosition(scrolled)
   }
 
@@ -44,16 +35,14 @@ const Navbar = () => {
               <div className='flex flex-wrap items-center justify-between w-full lg:w-auto'>
                 <Link href='/'>
                   <span className='flex items-center space-x-2 text-2xl font-medium text-white'>
-                    <span>
-                      {/* <Image src='/images/logo.jpg' alt='N' width='32' height='32' className='w-8' /> */}
-                    </span>
+                    <span></span>
                     <span>Andrei Cotfas</span>
                   </span>
                 </Link>
 
                 <Disclosure.Button
                   aria-label='Toggle Menu'
-                  className='px-2 py-1 ml-auto text-white rounded-md lg:hidden hover:text-red-600 focus:text-red-600 focus:outline-none'
+                  className='px-2 py-1 ml-auto text-white rounded-md lg:hidden hover:text-primary-color focus:text-primary-color focus:outline-none'
                 >
                   <svg
                     className='w-6 h-6 fill-current'
@@ -89,7 +78,7 @@ const Navbar = () => {
                     ))}
                     <Link
                       href='/'
-                      className='w-full px-6 py-2 mt-3 text-center border-2 border-white bg-red-600 hover:transition-all hover:bg-red-800 text-white rounded-md lg:ml-5'
+                      className='w-full px-6 py-2 mt-3 text-center border-2 border-white bg-color-primary hover:transition-all hover:bg-red-800 text-white rounded-md lg:ml-5'
                     >
                       Get Started
                     </Link>
@@ -107,7 +96,7 @@ const Navbar = () => {
               <li className='mr-3 nav__item' key={index}>
                 <Link
                   href='/'
-                  className='inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md hover:text-red-600 focus:text-red-600 focus:outline-none'
+                  className='inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md hover:text-color-primary focus:text-color-primary focus:outline-none'
                 >
                   {menu}
                 </Link>
@@ -119,7 +108,7 @@ const Navbar = () => {
         <div className='hidden mr-3 space-x-4 lg:flex nav__item'>
           <Link
             href='/'
-            className='px-6 py-2 border-solid border-2 border-white rounded-md bg-red-600 hover:transition-all hover:bg-red-800'
+            className='px-6 py-2 border-solid border-2 border-color-secondary hover:text-color-primary rounded-md bg-color-primary hover:transition-all hover:bg-color-secondary'
           >
             Get Started
           </Link>

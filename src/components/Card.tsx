@@ -1,16 +1,12 @@
-const Card = ({ text, image }: { text?: string | undefined; image: string }) => {
+const Card = ({ title, text, image }: { title: string; text: string; image: string }) => {
   return (
     <div
       style={{ backgroundImage: `url(${image})` }}
-      className={`w-10/12 md:w-full min-h-[400px] bg-cover bg-center 
-        shadow-lg shadow-red-600 rounded-md`}
+      className={`w-10/12 md:w-full min-h-[400px] bg-cover bg-center relative card`}
     >
-      <div className='w-full min-h-[400px] self-center	flex rounded-md bg-red-600 bg-opacity-50 text-white-600 transition duration-500 ease-in opacity-0 hover:opacity-100'>
-        {text && (
-          <div className='transition duration-500 ease-in-out transform hover:translate-y-8 '>
-            <p>{text}</p>
-          </div>
-        )}
+      <div className='card-anim relative min-h-[400px] px-4 flex flex-col justify-around items-center'>
+        <h1 className='font-semibold leading-8 uppercase text-2xl'>{title}</h1>
+        <p className='leading-5 uppercase text-lg'>{text}</p>
       </div>
     </div>
   )

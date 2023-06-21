@@ -9,8 +9,8 @@
   /* --color-primary: #dc2626; */
   /* --color-primary-hover: #991b1b; */
 
-  --color-primary: #EE4540;
-  --color-secondary: #C72C41;
+  --color-primary: #79031D;
+  --color-secondary: #EDB518;
   --color-ternary: #801336;
   --color-4: #510A32;
   --color-5: #2D142C;
@@ -29,17 +29,46 @@ body {
 .show-anim {
   position: relative;
   animation: rev-show-main 2s ease forwards;
+  -webkit-animation: rev-show-main 2s ease forwards;
 }
 
 .show-anim:after {
   content: " ";
   position: absolute;
   animation: rev-show-block 2s ease forwards;
-  background: var(--color-primary);
+  -webkit-animation: rev-show-block 2s ease forwards;
+  background: var(--color-secondary);
   left: 0%;
   top: 0%;
   width: 0%;
   height: 100%;
+}
+
+.card-anim {
+  transition: opacity 300ms;
+  transition-delay: 300ms;
+  opacity: 0;
+}
+
+.card:hover .card-anim {
+  opacity: 1;
+}
+
+.card::before {
+  content: " ";
+  position: absolute;
+  background: var(--color-primary);
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  animation: rev-show-block-out 300ms ease 500ms forwards;
+  -webkit-animation: rev-show-block-out 300ms ease 500ms forwards;
+}
+
+.card:hover::before {
+  animation: rev-show-block-in 300ms ease forwards;
+
 }
 
 @keyframes rev-show-main {
@@ -52,7 +81,7 @@ body {
   }
 
   50% {
-    color: #000;
+    color: #fff;
   }
 }
 
@@ -69,6 +98,54 @@ body {
 
   100% {
     left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes rev-show-main-in {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rev-show-main-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rev-show-block-in {
+  from {
+    left: 0%;
+    width: 0%;
+  }
+
+  to {
+    left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes rev-show-block-out {
+  from {
+    left: 0%;
+    width: 100%;
+  }
+
+  to {
+    left: 0%;
     width: 0%;
   }
 }

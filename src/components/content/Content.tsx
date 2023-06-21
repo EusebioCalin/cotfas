@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import text from '@/utils/en-US.json'
 import Card from '../Card'
 
 const imageStyle = {
@@ -10,7 +9,7 @@ const imageStyle = {
 export const Content = () => {
   return (
     <>
-      <section className='w-full text-center'>
+      <section className='max-w-screen-xl grid-cols-1 text-center'>
         <div className='my-24 flex flex-col content-center items-center'>
           <h1 className='font-semibold leading-8 uppercase text-3xl'>About me</h1>
 
@@ -22,12 +21,30 @@ export const Content = () => {
           </div>
 
           <div className='w-full flex flex-col md:grid content-center items-center gap-8 lg:p-4 grid-cols-1 md:grid-cols-2 '>
-            <Card image={'/images/card_1.jpg'} />
-            <Card image={'/images/card_2.jpg'} />
-            <Card image={'/images/card_3.png'} />
-            <div className='hidden md:block'>
-              <Card image={'/images/card_4.png'} />
-            </div>
+            <Image
+              src='/images/gallery_1.jpg'
+              width={500}
+              height={500}
+              alt='Picture of the author'
+            />
+            <Image
+              src='/images/gallery_2.jpg'
+              width={500}
+              height={500}
+              alt='Picture of the author'
+            />
+            <Image
+              src='/images/gallery_1.jpg'
+              width={500}
+              height={500}
+              alt='Picture of the author'
+            />
+            <Image
+              src='/images/gallery_2.jpg'
+              width={500}
+              height={500}
+              alt='Picture of the author'
+            />
           </div>
 
           <div className='my-16 mx-4 md:mx-0 md:w-2/3 w-2/3 leading-5 uppercase text-lg'>
