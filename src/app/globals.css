@@ -82,6 +82,7 @@ body {
 
   50% {
     color: #fff;
+    color: var(--color-primary);
   }
 }
 

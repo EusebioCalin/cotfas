@@ -11,7 +11,9 @@ export const Content = () => {
     <>
       <section className='max-w-screen-xl grid-cols-1 text-center'>
         <div className='my-24 flex flex-col content-center items-center'>
-          <h1 className='font-semibold leading-8 uppercase text-3xl'>About me</h1>
+          <h1 className='font-semibold leading-8 uppercase text-3xl text-color-secondary'>
+            About me
+          </h1>
 
           <div className='my-16 mx-4 md:mx-0 md:w-2/3 leading-5 uppercase text-lg'>
             <p>
@@ -47,15 +49,16 @@ export const Content = () => {
             />
           </div>
 
-          <div className='my-16 mx-4 md:mx-0 md:w-2/3 w-2/3 leading-5 uppercase text-lg'>
-            <p>
-              Drawing upon my extensive experience in professional sports and my education in sports
-              science, I have developed a training philosophy that focuses on enhancing your overall
-              movement patterns, helping you move better and feel better for the years to come. Gone
-              are the days of aimlessly chasing aesthetics or short-term results. It's time to
-              invest in your long-term well-being.
-            </p>
-          </div>
+          <p className='my-16 mx-4 md:mx-0 md:w-2/3 w-2/3 leading-5 uppercase text-lg'>
+            Drawing upon my extensive experience in professional sports and my education in sports
+            science, I have developed a training philosophy that focuses on enhancing your overall
+            movement patterns, helping you move better and feel better for the years to come. Gone
+            are the days of aimlessly chasing aesthetics or short-term results.{'  '}
+          </p>
+
+          <p className='eading-5 uppercase text-lg font-semibold text-color-secondary'>
+            It's time to invest in your long-term well-being.
+          </p>
         </div>
       </section>
     </>
