@@ -1,5 +1,5 @@
-import Card, { CarouselCard } from './card/Card'
-import Carousel from './carousel/Carousel'
+import Card, { CarouselCard } from '@/components/card/Card'
+import Carousel from '@/components/carousel/Carousel'
 import texts from '@/utils/en-US.json'
 const Cards = () => {
   const carouselData = [
