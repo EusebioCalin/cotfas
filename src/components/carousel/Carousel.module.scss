@@ -1,0 +1,11 @@
+.mySwiper {
+  max-width: 100%;
+
+  :global(.swiper-button-next) {
+    color: var(--color-secondary);
+  }
+
+  :global(.swiper-button-prev) {
+    color: var(--color-secondary);
+  }
+}

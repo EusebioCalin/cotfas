@@ -1,10 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { Disclosure } from '@headlessui/react'
 import { useEffect, useState } from 'react'
-import Button from '../Button/Button'
+import Button from '../button/Button'
 
 const Navbar = () => {
   const navigation = ['Coaching', 'Program', 'FAQS', 'About', 'Contact']

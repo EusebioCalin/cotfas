@@ -1,5 +1,6 @@
 import Cards from '@/components/Cards'
 import Content from '@/components/content/Content'
+import Testimonials from '@/components/content/testimonials/Testimonials'
 import LandingHero from '@/components/hero/LandingHero'
 import SecondaryHero from '@/components/hero/SecondaryHero'
 import text from '@/utils/en-US.json'
@@ -11,6 +12,7 @@ export default function Home() {
       <Content />
       <SecondaryHero text={text['hero.text2']} />
       <Cards />
+      <Testimonials />
     </main>
   )
 }
