@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { Disclosure } from '@headlessui/react'
 import { useEffect, useState } from 'react'
-import Button from '../button/Button'
+import Button from '@/components/button/Button'
 
 const Navbar = () => {
   const navigation = ['Coaching', 'Program', 'FAQS', 'About', 'Contact']
