@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Disclosure } from '@headlessui/react'
 import { useEffect, useState } from 'react'
+import Button from '../Button/Button'
 
 const Navbar = () => {
   const navigation = ['Coaching', 'Program', 'FAQS', 'About', 'Contact']
@@ -76,12 +77,8 @@ const Navbar = () => {
                         {item}
                       </Link>
                     ))}
-                    <Link
-                      href='/'
-                      className='w-full px-6 py-2 mt-3 text-center border-2 border-white bg-color-primary hover:transition-all hover:bg-red-800 text-white rounded-md lg:ml-5'
-                    >
-                      Get Started
-                    </Link>
+
+                    <Button text={'Get Started'} onClick={function (): void {}} />
                   </>
                 </Disclosure.Panel>
               </div>
@@ -106,12 +103,7 @@ const Navbar = () => {
         </div>
 
         <div className='hidden mr-3 space-x-4 lg:flex nav__item'>
-          <Link
-            href='/'
-            className='px-6 py-2 border-solid border-2 border-color-secondary hover:text-color-primary rounded-md bg-color-primary hover:transition-all hover:bg-color-secondary'
-          >
-            Get Started
-          </Link>
+          <Button text={'Get Started'} onClick={function (): void {}} />
         </div>
       </nav>
     </div>

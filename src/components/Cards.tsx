@@ -1,4 +1,4 @@
-import Card from './Card'
+import Card from './Card/Card'
 import text from '@/utils/en-US.json'
 const Cards = () => {
   return (

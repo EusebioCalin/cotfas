@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'custom-button':
+          'inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);',
+        'before-after-custom-button':
+          'box-shadow: 1px 1px 20px 0px rgba(255, 255, 255, .9), 1px 1px 5px 0px rgba(255, 255, 255, .9), 7px 7px 20px 0px rgba(0, 0, 0, .2), 4px 4px 5px 0px rgba(0, 0, 0, .3);',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -24,6 +30,7 @@ module.exports = {
       colors: {
         'color-primary': 'var(--color-primary)',
         'color-secondary': 'var(--color-secondary)',
+        'color-ternary': 'var(--color-ternary)',
       },
       // animation: {
       //   revShowBlock: 'revShowBlock 1s ease forwards',
