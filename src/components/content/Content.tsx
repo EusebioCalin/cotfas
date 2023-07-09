@@ -25,20 +25,6 @@ export const Content = () => {
               height={500}
               alt='Picture of the author'
             />
-            <Image
-              className='pb-4 md:p-0'
-              src='/images/gallery_1.jpg'
-              width={500}
-              height={500}
-              alt='Picture of the author'
-            />
-            <Image
-              className='md:p-0'
-              src='/images/gallery_2.jpg'
-              width={500}
-              height={500}
-              alt='Picture of the author'
-            />
           </div>
 
           <p className='mt-16 w-full leading-5 text-lg'>{text['content.text2']}</p>

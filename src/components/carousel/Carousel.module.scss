@@ -1,3 +1,5 @@
+@use '/styles/_mixins' as *;
+
 .mySwiper {
   max-width: 100%;
 
@@ -7,5 +9,29 @@
 
   :global(.swiper-button-prev) {
     color: var(--color-secondary);
+  }
+}
+
+.mySwiperCards {
+  // xs
+  width: 65vw;
+  margin-left: 30px;
+  margin-right: 60px;
+
+  @include sm {
+    width: 280px;
+  }
+
+  @include md {
+    width: 400px;
+  }
+
+  @include lg {
+    width: 760px;
+  }
+
+  :global(.swiper-slide) {
+    background-color: var(--color-primary);
+    border-radius: 8px;
   }
 }

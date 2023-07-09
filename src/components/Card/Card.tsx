@@ -21,7 +21,7 @@ const Card = ({ title, text, image }: { title: string; text: string; image: stri
   )
 }
 
-export const CarouselCard = ({
+export const NavigationCarouselCard = ({
   title,
   text,
   image,
@@ -38,6 +38,34 @@ export const CarouselCard = ({
 
       {image && <Image src={image} width={500} height={500} alt='Andrei Cotfas' />}
       <p className='leading-5 text-center my-4'>{text}</p>
+    </div>
+  )
+}
+
+export const TestimonialCardsCarouselCard = ({
+  title,
+  text,
+  image,
+  clientName,
+}: {
+  title?: string
+  text: string
+  clientName: string
+  image?: string
+}) => {
+  return (
+    <div className='flex flex-col items-center justify-center my-8'>
+      <div className={'rounded-md overflow-hidden'}>
+        <Image
+          src={image ? image : '/images/profile_icon.png'}
+          height={100}
+          width={100}
+          alt={'client_profile_pic'}
+        />
+      </div>
+
+      <h1 className='leading-8 text-center text-2xl text-color-secondary'>John Doe</h1>
+      <p className='leading-5 text-center my-4 px-2'>{text}</p>
     </div>
   )
 }
