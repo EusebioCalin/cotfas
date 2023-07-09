@@ -1,9 +1,11 @@
 import Cards from '@/components/Cards'
 import Content from '@/components/content/Content'
-import Testimonials from '@/components/content/testimonials/Testimonials'
+import Testimonials from '@/components/testimonials/Testimonials'
 import LandingHero from '@/components/hero/LandingHero'
 import SecondaryHero from '@/components/hero/SecondaryHero'
 import text from '@/utils/en-US.json'
+import Coaching from '@/components/coaching/Coaching'
+import FAQ from '@/components/FAQ/FAQ'
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <SecondaryHero text={text['hero.text2']} />
       <Cards />
       <Testimonials />
+      <Coaching />
+      <FAQ />
     </main>
   )
 }

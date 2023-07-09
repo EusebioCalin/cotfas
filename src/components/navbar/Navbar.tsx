@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import Button from '@/components/button/Button'
 
 const Navbar = () => {
-  const navigation = ['Coaching', 'Program', 'FAQS', 'About', 'Contact']
+  const navigation = ['Coaching', 'FAQS', 'Contact']
   const [scrollPosition, setScrollPosition] = useState<number>(0)
 
   const handleScroll = (event: Event) => {
