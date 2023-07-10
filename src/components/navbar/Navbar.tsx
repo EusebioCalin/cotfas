@@ -70,7 +70,7 @@ const Navbar = () => {
                     {navigation.map((item, index) => (
                       <Link
                         key={index}
-                        href='/'
+                        href={`#${item.toLocaleLowerCase()}`}
                         className='w-full px-6 py-2 rounded-md text-white hover:text-red-600 focus:text-red-600 focus:bg-gray-800 focus:outline-none'
                       >
                         {item}
@@ -91,7 +91,7 @@ const Navbar = () => {
             {navigation.map((menu, index) => (
               <li className='mr-3 nav__item' key={index}>
                 <Link
-                  href='/'
+                  href={`#${menu.toLocaleLowerCase()}`}
                   className='inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md hover:text-color-primary focus:text-color-primary focus:outline-none'
                 >
                   {menu}

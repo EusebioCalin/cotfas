@@ -46,7 +46,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className='ml-4 flex flex-col items-start justify-center'>
+        <div id='contact' className='ml-4 flex flex-col items-start justify-center'>
           <div className='mr-4'>Follow</div>
           <div className='flex space-x-5 text-white hover:text-color-primary'>
             <a href='https://facebook.com/web3templates' target='_blank' rel='noopener'>
