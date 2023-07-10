@@ -5,7 +5,7 @@ export const Content = () => {
   return (
     <>
       <section className='max-w-screen-xl grid-cols-1 text-center'>
-        <div className='my-16 flex flex-col content-center items-center px-6 md:px-0'>
+        <div className='my-16 flex flex-col content-center items-center px-6 lg:px-0'>
           <h1 className='font-semibold leading-8 uppercase text-3xl text-color-secondary'>
             About me
           </h1>
@@ -26,7 +26,6 @@ export const Content = () => {
               alt='Picture of the author'
             />
           </div>
-
           <p className='mt-16 w-full leading-5 text-lg'>{text['content.text2']}</p>
         </div>
       </section>

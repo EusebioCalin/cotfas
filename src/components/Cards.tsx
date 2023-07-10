@@ -2,43 +2,42 @@ import Card, { NavigationCarouselCard } from '@/components/card/Card'
 import Carousel from '@/components/carousel/Carousel'
 import texts from '@/utils/en-US.json'
 
+const carouselData = [
+  {
+    title: 'card.title1',
+    text: 'card.text1',
+    image: '/images/card_1.jpg',
+  },
+  {
+    title: 'card.title2',
+    text: 'card.text2',
+    image: '/images/card_2.jpg',
+  },
+  {
+    title: 'card.title3',
+    text: 'card.text3',
+    image: '/images/card_3.png',
+  },
+  {
+    title: 'card.title4',
+    text: 'card.text4',
+    image: '/images/card_1.jpg',
+  },
+]
+
+const carouselCards = carouselData.map((elem) => (
+  <NavigationCarouselCard
+    key={elem.title}
+    //@ts-ignore
+    title={texts[elem.title]}
+    //@ts-ignore
+    text={texts[elem.text]}
+    image={elem.image}
+  />
+))
 const Cards = () => {
-  const carouselData = [
-    {
-      title: 'card.title1',
-      text: 'card.text1',
-      image: '/images/card_1.jpg',
-    },
-    {
-      title: 'card.title2',
-      text: 'card.text2',
-      image: '/images/card_2.jpg',
-    },
-    {
-      title: 'card.title3',
-      text: 'card.text3',
-      image: '/images/card_3.png',
-    },
-    {
-      title: 'card.title4',
-      text: 'card.text4',
-      image: '/images/card_1.jpg',
-    },
-  ]
-
-  const carouselCards = carouselData.map((elem, index) => (
-    <NavigationCarouselCard
-      key={elem.title}
-      //@ts-ignore
-      title={texts[elem.title]}
-      //@ts-ignore
-      text={texts[elem.text]}
-      image={elem.image}
-    />
-  ))
-
   return (
-    <section className='max-w-screen-xl px-6 md:px-0'>
+    <section className='max-w-screen-xl px-6 lg:px-0'>
       <h1 className='mt-16 font-semibold text-center leading-8 uppercase text-3xl text-color-secondary'>
         {texts['cards.header']}
       </h1>
@@ -73,7 +72,7 @@ const Cards = () => {
         />
       </div>
       {/* small screen */}
-      <div className='lg:hidden my-16 grid grid-cols-1 place-items-center'>
+      <div className='lg:hidden mt-16 grid grid-cols-1 place-items-center'>
         <Carousel data={carouselCards} />
       </div>
     </section>

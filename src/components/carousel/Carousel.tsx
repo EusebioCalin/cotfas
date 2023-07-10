@@ -1,12 +1,13 @@
 'use client'
+import { ReactNode } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectCards, Navigation } from 'swiper'
+import { EffectCards, Navigation, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
+import 'swiper/css/pagination'
 import styles from './Carousel.module.scss'
-import { ReactNode } from 'react'
 
 export default function Carousel({
   data,
@@ -27,7 +28,10 @@ export default function Carousel({
           spaceBetween={30}
           loop={true}
           navigation={true}
-          modules={[Navigation]}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Navigation, Pagination]}
           className={styles.mySwiper}
         >
           {renderedItems}
@@ -38,9 +42,15 @@ export default function Carousel({
   if (carouselType === 'cards') {
     return (
       <Swiper
-        effect={'cards'}
+        effect='cards'
         grabCursor={true}
-        modules={[EffectCards]}
+        keyboard={{
+          enabled: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[EffectCards, Pagination]}
         className={styles.mySwiperCards}
       >
         {renderedItems}

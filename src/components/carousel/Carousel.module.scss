@@ -3,6 +3,18 @@
 .mySwiper {
   max-width: 100%;
 
+  :global(.swiper-slide) {
+    height: auto;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    background-color: white;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: var(--color-secondary);
+  }
+
   :global(.swiper-button-next) {
     color: var(--color-secondary);
   }
@@ -20,18 +32,29 @@
 
   @include sm {
     width: 280px;
+    margin: 0;
   }
 
   @include md {
     width: 400px;
+    margin: 0;
   }
 
   @include lg {
-    width: 760px;
+    width: 700px;
+    margin: 0;
   }
 
   :global(.swiper-slide) {
     background-color: var(--color-primary);
     border-radius: 8px;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    background-color: white;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: var(--color-secondary);
   }
 }
