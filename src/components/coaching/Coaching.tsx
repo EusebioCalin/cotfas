@@ -8,7 +8,7 @@ export const Coaching = () => {
       <section id='coaching' className='max-w-screen-xl grid-cols-1 text-center px-6'>
         <div className='mt-16 flex flex-col  content-center items-center'>
           <h1 className='font-semibold leading-8 uppercase text-3xl text-color-secondary'>
-            {texts['coaching.title']}
+            {texts['coaching.sectionTitle']}
           </h1>
           <div className='flex flex-col md:flex-row items-center justify-center mt-16'>
             <div className='w-full md:w-1/2'>

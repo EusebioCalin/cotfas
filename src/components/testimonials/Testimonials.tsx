@@ -3,15 +3,18 @@ import Carousel from '@/components/carousel/Carousel'
 import { TestimonialCardsCarouselCard } from '@/components/card/Card'
 
 export const Testimonials = () => {
-  const carouselData = [
-    'testimonials.text1',
-    'testimonials.text2',
-    'testimonials.text3',
-    'testimonials.text4',
-  ]
-  const carouselCards = carouselData.map((elem, index) => (
-    //@ts-ignore
-    <TestimonialCardsCarouselCard key={`index_${elem}`} text={texts[elem]} />
+  const testimonials = Object.keys(texts).filter((t) => t.includes('testimonials.text'))
+
+  const carouselCards = testimonials.map((elem, index) => (
+    <TestimonialCardsCarouselCard
+      key={`index_${elem}`}
+      //@ts-ignore
+      clientName={texts[`testimonials.name${index + 1}`]}
+      //@ts-ignore
+      text={texts[elem]}
+      //@ts-ignore
+      image={texts[`testimonials.picture${index + 1}`]}
+    />
   ))
   return (
     <>
@@ -21,8 +24,11 @@ export const Testimonials = () => {
             {texts['testimonials.title']}
           </h1>
 
-          <div className='hidden xs:grid grid-cols-1 my-16 text-center relative max-w-screen-xl'>
+          <div className='hidden md:grid grid-cols-1 my-16 text-center relative max-w-screen-xl'>
             <Carousel carouselType='cards' data={carouselCards} />
+          </div>
+          <div className='md:hidden mt-16 grid grid-cols-1 place-items-center'>
+            <Carousel data={carouselCards} />
           </div>
         </div>
       </section>
