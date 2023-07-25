@@ -18,16 +18,16 @@ export const Content = () => {
           <div className='w-full grid md:gap-8 grid-cols-1 md:grid-cols-2 place-items-center'>
             <Image
               className='pb-4 md:p-0'
-              src='/images/gallery_1.jpg'
-              width={500}
-              height={500}
+              src='/images/gallery_1-mobile.jpg'
+              width={1500}
+              height={1500}
               alt='Picture of the author'
             />
             <Image
               className='pb-4 md:p-0'
-              src='/images/gallery_2.jpg'
-              width={500}
-              height={500}
+              src='/images/gallery_2-mobile.jpg'
+              width={1500}
+              height={1500}
               alt='Picture of the author'
             />
           </div>

@@ -6,22 +6,22 @@ const carouselData = [
   {
     title: 'card.title1',
     text: 'card.text1',
-    image: '/images/card_1.jpg',
+    image: '/images/card_1-mobile.jpg',
   },
   {
     title: 'card.title2',
     text: 'card.text2',
-    image: '/images/card_2.jpg',
+    image: '/images/card_2-mobile.jpg',
   },
   {
     title: 'card.title3',
     text: 'card.text3',
-    image: '/images/card_3.png',
+    image: '/images/card_3-mobile.jpg',
   },
   {
     title: 'card.title4',
     text: 'card.text4',
-    image: '/images/card_1.jpg',
+    image: '/images/card_4-mobile.jpg',
   },
 ]
 
@@ -56,19 +56,19 @@ const Cards = () => {
         <Card
           title={texts['card.title3']}
           text={texts['card.text3']}
-          image={'/images/card_3.png'}
+          image={'/images/card_3.jpg'}
         />
       </div>
       <div className='hidden w-full lg:grid content-center items-center gap-4 mb-16 lg:p-4 md:grid-cols-2 '>
         <Card
           title={texts['card.title4']}
           text={texts['card.text4']}
-          image={'/images/card_4.png'}
+          image={'/images/card_4.jpg'}
         />
         <Card
           title={texts['card.title5']}
           text={texts['card.text5']}
-          image={'/images/card_1.jpg'}
+          image={'/images/card_5.jpg'}
         />
       </div>
       {/* small screen */}
