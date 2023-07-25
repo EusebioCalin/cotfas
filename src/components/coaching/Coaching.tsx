@@ -1,8 +1,10 @@
 import texts from '@/utils/en-US.json'
 import Image from 'next/image'
-import Button from '../button/Button'
+import { getImage } from '@/utils/utils'
 
-export const Coaching = () => {
+export const Coaching = async () => {
+  const { base64, img } = await getImage('/images/coaching-mobile.jpg')
+
   return (
     <>
       <section id='coaching' className='max-w-screen-xl text-center px-6'>
@@ -13,13 +15,12 @@ export const Coaching = () => {
           <div className='grid grid-cols-1 lg:grid-cols-3 mt-16 gap-8'>
             <Image
               className=' lg:col-span-2'
-              src={'/images/coaching-mobile.jpg'}
+              src={img}
               width={1500}
               height={1500}
               alt='Andrei Cotfas'
-              // placeholder='blur'
-              // to be replaced with small 10px image
-              // blurDataURL={rgbDataURL(255, 255, 100)}
+              placeholder='blur'
+              blurDataURL={base64}
             />
             <div className=''>
               <div>{texts['coaching.text']}</div>

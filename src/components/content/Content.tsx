@@ -1,7 +1,13 @@
 import Image from 'next/image'
 import text from '@/utils/en-US.json'
+import { getImage } from '@/utils/utils'
 
-export const Content = () => {
+export const Content = async () => {
+  const [imageData1, imageData2] = await Promise.all([
+    getImage('/images/gallery_1-mobile.jpg'),
+    getImage('/images/gallery_2-mobile.jpg'),
+  ])
+
   return (
     <>
       <section className='max-w-screen-xl grid-cols-1 text-center'>
@@ -18,17 +24,21 @@ export const Content = () => {
           <div className='w-full grid md:gap-8 grid-cols-1 md:grid-cols-2 place-items-center'>
             <Image
               className='pb-4 md:p-0'
-              src='/images/gallery_1-mobile.jpg'
+              src={imageData1.img}
               width={1500}
               height={1500}
-              alt='Picture of the author'
+              alt='Andrei Cotfas'
+              placeholder='blur'
+              blurDataURL={imageData1.base64}
             />
             <Image
               className='pb-4 md:p-0'
-              src='/images/gallery_2-mobile.jpg'
+              src={imageData2.img}
               width={1500}
               height={1500}
-              alt='Picture of the author'
+              alt='Andrei Cotfas'
+              placeholder='blur'
+              blurDataURL={imageData2.base64}
             />
           </div>
           <p className='mt-16 w-full leading-5 text-lg'>{text['content.text5']}</p>
