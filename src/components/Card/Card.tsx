@@ -1,6 +1,5 @@
 import cn from 'classnames'
 import styles from './Card.module.scss'
-import Image from 'next/image'
 
 const Card = ({ title, text, image }: { title: string; text: string; image: string }) => {
   return (
@@ -20,7 +19,5 @@ const Card = ({ title, text, image }: { title: string; text: string; image: stri
     </div>
   )
 }
-
-
 
 export default Card
