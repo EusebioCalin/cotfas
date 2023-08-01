@@ -16,13 +16,15 @@ export const FAQ = () => {
         const text = texts[`faq.text${index + 1}`]
         return (
           <>
-            <Disclosure.Button className='flex w-full justify-between items-center rounded-lg bg-color-primary px-4 py-2 text-left text-white hover:text-color-secondary '>
+            <Disclosure.Button className='flex w-full justify-between items-center rounded-lg bg-color-primary px-4 py-2 text-left text-white hover:text-color-secondary text-xl'>
               <span>{title}</span>
               <ChevronUpIcon
                 className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-color-secondary`}
               />
             </Disclosure.Button>
-            <Disclosure.Panel className='px-4 pt-4 pb-2  text-white'>{text}</Disclosure.Panel>
+            <Disclosure.Panel className='px-4 pt-4 pb-2 text-xl text-white'>
+              {text}
+            </Disclosure.Panel>
           </>
         )
       }}
@@ -36,7 +38,7 @@ export const FAQ = () => {
             {texts['faq.sectionTitle']}
           </h1>
         </div>
-        <div className='w-screen px-4 pt-16 max-w-screen-md'>{disclosureElements}</div>
+        <div className='w-screen px-4 pt-8 max-w-screen-md'>{disclosureElements}</div>
       </section>
     </>
   )

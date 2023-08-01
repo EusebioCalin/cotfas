@@ -1,11 +1,15 @@
 import { Metadata } from 'next'
 import './globals.css'
-import { Inter } from 'next/font/google'
-import { Open_Sans } from 'next/font/google'
 import Navbar from '@/components/navbar/Navbar'
 import Footer from '@/components/footer/Footer'
 
-const openSans = Open_Sans({ subsets: ['latin'] })
+import { Oxanium } from 'next/font/google'
+
+const oxanium = Oxanium({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '600'],
+})
 
 export const metadata: Metadata = {
   title: 'Andrei Cotfas',
@@ -15,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={openSans.className}>
+      <body className={oxanium.className}>
         <header>
           <Navbar />
         </header>

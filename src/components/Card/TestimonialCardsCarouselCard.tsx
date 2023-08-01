@@ -20,8 +20,8 @@ export const TestimonialCardsCarouselCard = ({
         />
       </div>
 
-      <h1 className='leading-8 text-center my-4 text-2xl text-color-secondary'>{clientName}</h1>
-      <p className='leading-5 text-center mx-16'>{text}</p>
+      <h1 className='text-center my-4 text-3xl text-color-secondary'>{clientName}</h1>
+      <p className='text-md text-center mx-16'>{text}</p>
     </div>
   )
 }

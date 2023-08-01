@@ -12,7 +12,7 @@ export const Coaching = async () => {
           <h1 className='font-semibold leading-8 uppercase text-3xl text-color-secondary'>
             {texts['coaching.sectionTitle']}
           </h1>
-          <div className='grid grid-cols-1 lg:grid-cols-3 mt-16 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 mt-8 gap-8'>
             <Image
               className=' lg:col-span-2'
               src={img}
@@ -22,7 +22,7 @@ export const Coaching = async () => {
               placeholder='blur'
               blurDataURL={base64}
             />
-            <div className=''>
+            <div className='text-xl'>
               <div>{texts['coaching.text']}</div>
               <div>COMING SOON</div>
             </div>

@@ -11,9 +11,12 @@ export const Content = async () => {
 
   return (
     <>
-      <section className='max-w-screen-xl grid-cols-1 text-center'>
-        <div className='my-16 flex flex-col content-center items-center px-6 lg:px-0'>
-          <h1 className='font-semibold leading-8 uppercase text-3xl text-color-secondary'>
+      <section className='max-w-screen-xl grid-cols-1 text-center leading-8'>
+        <div
+          id='get-started'
+          className='my-16 flex flex-col content-center items-center px-6 lg:px-0'
+        >
+          <h1 className='font-semibold uppercase text-3xl text-color-secondary'>
             {text['content.sectionTitle']}
           </h1>
           <GetStarted />
@@ -37,8 +40,8 @@ export const Content = async () => {
               blurDataURL={imageData2.base64}
             />
           </div>
-          <p className='mt-16 w-full leading-5 text-lg'>{text['content.text5']}</p>
-          <div className='my-16'>
+          <p className='mt-8 w-full text-xl'>{text['content.text5']}</p>
+          <div className='mt-8'>
             <h1 className='font-semibold leading-8 uppercase text-3xl text-color-secondary'>
               {text['content.subtitle']}
             </h1>

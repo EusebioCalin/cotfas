@@ -24,10 +24,10 @@ export const Testimonials = () => {
             {texts['testimonials.title']}
           </h1>
 
-          <div className='hidden md:grid grid-cols-1 my-16 text-center relative max-w-screen-xl'>
+          <div className='hidden md:grid grid-cols-1 mt-8 text-center relative max-w-screen-xl'>
             <Carousel carouselType='cards' data={carouselCards} />
           </div>
-          <div className='md:hidden mt-16 grid grid-cols-1 place-items-center'>
+          <div className='md:hidden mt-8 grid grid-cols-1 place-items-center'>
             <Carousel data={carouselCards} />
           </div>
         </div>

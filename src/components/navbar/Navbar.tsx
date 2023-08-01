@@ -30,11 +30,11 @@ const Navbar = () => {
       <nav className='container relative flex flex-wrap items-center justify-between p-4 mx-auto lg:justify-between xl:px-0'>
         {/* Logo  */}
         <Disclosure>
-          {({ open }) => (
+          {({ open, close }) => (
             <>
               <div className='flex flex-wrap items-center justify-between w-full lg:w-auto'>
                 <Link href='/'>
-                  <span className='flex items-center space-x-2 text-2xl font-medium text-white'>
+                  <span className='flex items-center space-x-2 text-3xl font-medium text-white'>
                     <span></span>
                     <span>Andrei Cotfas</span>
                   </span>
@@ -71,13 +71,22 @@ const Navbar = () => {
                       <Link
                         key={index}
                         href={`#${item.toLocaleLowerCase()}`}
-                        className='w-full px-6 py-2 rounded-md text-white hover:text-red-600 focus:text-red-600 focus:bg-gray-800 focus:outline-none'
+                        className='w-full px-6 py-2 rounded-md text-xl text-white hover:text-red-600 focus:text-red-600 focus:bg-gray-800 focus:outline-none'
+                        onClick={() => close()}
                       >
                         {item}
                       </Link>
                     ))}
 
-                    <Button text={'Get Started'} onClick={function (): void {}} />
+                    <div className='text-xl'>
+                      <Button
+                        text={'Get Started'}
+                        onClick={() => {
+                          close()
+                          location.href = '#get-started'
+                        }}
+                      />
+                    </div>
                   </>
                 </Disclosure.Panel>
               </div>
@@ -92,7 +101,7 @@ const Navbar = () => {
               <li className='mr-3 nav__item' key={index}>
                 <Link
                   href={`#${menu.toLocaleLowerCase()}`}
-                  className='inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md hover:text-color-primary focus:text-color-primary focus:outline-none'
+                  className='inline-block px-4 py-2 text-xl font-normal text-white no-underline rounded-md hover:text-color-primary focus:text-color-primary focus:outline-none'
                 >
                   {menu}
                 </Link>
@@ -101,8 +110,13 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className='hidden mr-3 space-x-4 lg:flex nav__item'>
-          <Button text={'Get Started'} onClick={function (): void {}} />
+        <div className='hidden mr-3 text-xl space-x-4 lg:flex nav__item'>
+          <Button
+            text={'Get Started'}
+            onClick={() => {
+              location.href = '#get-started'
+            }}
+          />
         </div>
       </nav>
     </div>
