@@ -1,7 +1,7 @@
 import Card from '@/components/card/Card'
 import Carousel from '@/components/carousel/Carousel'
 import texts from '@/utils/en-US.json'
-import NavigationCarouselCard from '../card/NavigationCarouselCard'
+import NavigationCarouselCard from '@/components/card/NavigationCarouselCard'
 
 const carouselData = [
   {
