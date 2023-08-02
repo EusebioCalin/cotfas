@@ -1,59 +1,52 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import React from 'react'
 
 export default function Footer() {
-  const navigation = ['Products', 'Pricing', 'Blog']
-  const legal = ['Terms', 'Privacy', 'Legal']
+  const navigation = ['Coaching', 'FAQs']
   return (
-    <div className='relative'>
-      <div className='grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5'>
-        <div className='lg:col-span-2'>
+    <div id='contact' className='relative w-full border-t pt-10 mt-5 px-4 md:px-0'>
+      <div className='grid max-w-screen-xl grid-cols-1 gap-6 md:gap-10 mx-auto border-gray-100 dark:border-trueGray-700 lg:grid-cols-4 items-center lg:place-items-center'>
+        <div className='lg:col-span-1'>
           <div>
             {' '}
             <Link
               href='/'
-              className='flex items-center space-x-2 text-2xl ml-4 font-medium text-indigo-500 dark:text-gray-100'
+              className='flex items-center space-x-2 text-2xl ml-4 font-medium text-white hover:text-color-secondary focus:text-color-secondary'
             >
               <span>Andrei Cotfas</span>
             </Link>
           </div>
         </div>
 
-        <div>
-          <div className='flex flex-wrap w-full lg:ml-0'>
-            {navigation.map((item, index) => (
-              <Link
-                key={index}
-                href='/'
-                className='w-full px-4 py-2 text-white hover:text-red-600 focus:text-red-600 focus:bg-gray-800 focus:outline-none'
-              >
-                {item}
-              </Link>
-            ))}
+        {navigation.map((item, index) => (
+          <div className=''>
+            <Link
+              key={index}
+              href={`#${item.toLocaleLowerCase()}`}
+              className='flex items-center space-x-2 text-xl ml-4 font-medium text-white hover:text-color-secondary focus:text-color-secondary'
+            >
+              {item}
+            </Link>
           </div>
-        </div>
-        <div>
-          <div className='flex flex-wrap w-full lg:ml-0'>
-            {legal.map((item, index) => (
-              <Link
-                key={index}
-                href='/'
-                className='w-full px-4 py-2 rounded-md text-white hover:text-red-600 focus:text-red-600 focus:bg-gray-800 focus:outline-none'
-              >
-                {item}
-              </Link>
-            ))}
-          </div>
-        </div>
-        <div id='contact' className='ml-4 flex flex-col items-start justify-center'>
-          <div className='mr-4'>Follow</div>
-          <div className='flex space-x-5 text-white hover:text-color-primary'>
-            <a href='https://facebook.com/web3templates' target='_blank' rel='noopener'>
+        ))}
+
+        <div className='ml-4 flex flex-col items-start justify-center'>
+          <div className='flex space-x-5 text-white'>
+            <a
+              className='hover:text-color-secondary'
+              href='https://www.facebook.com/profile.php?id=100009539254495'
+              target='_blank'
+              rel='noopener'
+            >
               <span className='sr-only'>Facebook</span>
               <Facebook />
             </a>
-            <a href='https://instagram.com/web3templates' target='_blank' rel='noopener'>
+            <a
+              className='hover:text-color-secondary'
+              href='https://www.instagram.com/cotfasandrei'
+              target='_blank'
+              rel='noopener'
+            >
               <span className='sr-only'>Instagram</span>
               <Instagram />
             </a>
@@ -62,7 +55,7 @@ export default function Footer() {
       </div>
 
       <div className='my-10 text-sm text-center text-gray-600 dark:text-gray-400'>
-        Copyright © {new Date().getFullYear()}. Made with ♥ by{' '}
+        Copyright © {new Date().getFullYear()}. Made with ♥ by DEVINT
       </div>
     </div>
   )

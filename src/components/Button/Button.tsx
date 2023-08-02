@@ -9,9 +9,9 @@ const Button = ({ text, onClick }: { text: string; onClick: () => void }) => {
         `
         rounded-md 
         hover:rounded-sm
-        cursor-pointer transition-all relative w-36
-        
-        shadow-custom-button 
+        cursor-pointer transition-all relative w-36  
+
+        shadow-new-custom-button
         btn-7
 
         before:absolute
@@ -40,7 +40,7 @@ const Button = ({ text, onClick }: { text: string; onClick: () => void }) => {
         hover:after:w-full
         leading-10
         text-center
-        bg-gradient-to-r from-color-primary to-color-ternary
+        bg-color-primary
         hover:bg-gradient-to-r hover:from-transparent hover:to-transparent
         `,
       )}

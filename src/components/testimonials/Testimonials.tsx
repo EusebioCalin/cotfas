@@ -18,13 +18,13 @@ export const Testimonials = () => {
   ))
   return (
     <>
-      <section className='max-w-screen-xl grid-cols-1 text-center md:px-0'>
+      <section className='max-w-screen-xl grid-cols-1 text-left md:px-0'>
         <div className='mt-16 flex flex-col content-center items-center'>
           <h1 className='font-semibold leading-8 uppercase text-3xl text-color-secondary'>
             {texts['testimonials.title']}
           </h1>
 
-          <div className='hidden md:grid grid-cols-1 mt-8 text-center relative max-w-screen-xl'>
+          <div className='hidden md:grid grid-cols-1 mt-8 relative max-w-screen-xl'>
             <Carousel carouselType='cards' data={carouselCards} />
           </div>
           <div className='md:hidden mt-8 grid grid-cols-1 place-items-center'>

@@ -16,6 +16,17 @@ const Navbar = () => {
     setScrollPosition(scrolled)
   }
 
+  const scrollToElement = (elementId: string) => {
+    const scrollToSection = document.getElementById(elementId)
+    if (scrollToSection) {
+      window.scrollTo({
+        left: 0,
+        top: scrollToSection.offsetTop,
+        behavior: 'smooth',
+      })
+    }
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     ;() => {
@@ -24,7 +35,7 @@ const Navbar = () => {
   }, [])
   return (
     <div
-      className={`w-full fixed  top-0 z-10 ${scrollPosition > 0.1 ? 'bg-black' : 'bg-transparent'} 
+      className={`w-full fixed top-0 z-10 ${scrollPosition > 0.1 ? 'bg-black' : 'bg-transparent'} 
       transition duration-500 ease-in-out transform hover:bg-black`}
     >
       <nav className='container relative flex flex-wrap items-center justify-between p-4 mx-auto lg:justify-between xl:px-0'>
@@ -33,12 +44,16 @@ const Navbar = () => {
           {({ open, close }) => (
             <>
               <div className='flex flex-wrap items-center justify-between w-full lg:w-auto'>
-                <Link href='/'>
-                  <span className='flex items-center space-x-2 text-3xl font-medium text-white'>
-                    <span></span>
+                <div
+                  onClick={() => {
+                    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+                    close()
+                  }}
+                >
+                  <span className='flex items-center space-x-2 text-3xl pb-2 font-medium text-white hover:text-color-secondary'>
                     <span>Andrei Cotfas</span>
                   </span>
-                </Link>
+                </div>
 
                 <Disclosure.Button
                   aria-label='Toggle Menu'
@@ -65,25 +80,27 @@ const Navbar = () => {
                   </svg>
                 </Disclosure.Button>
 
-                <Disclosure.Panel className='flex flex-wrap w-full my-5 lg:hidden'>
+                <Disclosure.Panel className='flex flex-wrap w-full lg:hidden'>
                   <>
                     {navigation.map((item, index) => (
-                      <Link
+                      <div
                         key={index}
-                        href={`#${item.toLocaleLowerCase()}`}
-                        className='w-full px-6 py-2 rounded-md text-xl text-white hover:text-red-600 focus:text-red-600 focus:bg-gray-800 focus:outline-none'
-                        onClick={() => close()}
+                        className='w-full py-2 rounded-md text-xl text-white hover:text-color-secondary focus:text-color-secondary focus:outline-none'
+                        onClick={() => {
+                          scrollToElement(item.toLocaleLowerCase())
+                          close()
+                        }}
                       >
                         {item}
-                      </Link>
+                      </div>
                     ))}
 
-                    <div className='text-xl'>
+                    <div className='text-xl py-2'>
                       <Button
                         text={'Get Started'}
                         onClick={() => {
                           close()
-                          location.href = '#get-started'
+                          scrollToElement('get-started')
                         }}
                       />
                     </div>
@@ -99,24 +116,19 @@ const Navbar = () => {
           <ul className='items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex'>
             {navigation.map((menu, index) => (
               <li className='mr-3 nav__item' key={index}>
-                <Link
-                  href={`#${menu.toLocaleLowerCase()}`}
-                  className='inline-block px-4 py-2 text-xl font-normal text-white no-underline rounded-md hover:text-color-primary focus:text-color-primary focus:outline-none'
+                <div
+                  onClick={() => scrollToElement(menu.toLocaleLowerCase())}
+                  className='inline-block px-4 py-2 text-xl font-normal text-white no-underline rounded-md hover:text-color-secondary focus:text-color-secondary focus:outline-none'
                 >
                   {menu}
-                </Link>
+                </div>
               </li>
             ))}
           </ul>
         </div>
 
         <div className='hidden mr-3 text-xl space-x-4 lg:flex nav__item'>
-          <Button
-            text={'Get Started'}
-            onClick={() => {
-              location.href = '#get-started'
-            }}
-          />
+          <Button text={'Get Started'} onClick={() => scrollToElement('get-started')} />
         </div>
       </nav>
     </div>

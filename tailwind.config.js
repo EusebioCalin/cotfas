@@ -14,6 +14,7 @@ module.exports = {
     },
     extend: {
       boxShadow: {
+        'new-custom-button': 'inset 0 1px 1px 0 rgba(255, 255, 255, .5);',
         'custom-button':
           'inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);',
         'before-after-custom-button':
@@ -32,33 +33,6 @@ module.exports = {
         'color-secondary': 'var(--color-secondary)',
         'color-ternary': 'var(--color-ternary)',
       },
-      // animation: {
-      //   revShowBlock: 'revShowBlock 1s ease forwards',
-      //   revShowMain: 'revShowMain 1s ease forwards',
-      // },
-      // keyframes: {
-      //   revShowMain: {
-      //     '0%': { color: transparent, opacity: 0 },
-      //     '49%': { color: transparent, opacity: 0 },
-      //     '50%': { color: '#000',},
-      //   },
-      //   revShowBlock: {
-      //     '0%': {
-      //       left: '0%',
-      //       width: '0%',
-      //     },
-
-      //     '50%': {
-      //       left: '0%',
-      //       width: '100%',
-      //     },
-
-      //     '100%': {
-      //       left: '100%',
-      //       width: '0%',
-      //     },
-      //   },
-      // },
     },
   },
   plugins: [],

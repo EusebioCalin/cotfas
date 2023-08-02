@@ -20,7 +20,7 @@ export const TestimonialCardsCarouselCard = ({
         />
       </div>
 
-      <h1 className='text-center my-4 text-3xl text-color-secondary'>{clientName}</h1>
+      <h1 className='my-4 text-3xl text-color-secondary'>{clientName}</h1>
       <p className='text-md text-center mx-16'>{text}</p>
     </div>
   )

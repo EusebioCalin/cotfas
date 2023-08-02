@@ -32,7 +32,7 @@ export const FAQ = () => {
   ))
   return (
     <>
-      <section id='faqs' className='max-w-screen-xl grid-cols-1 text-center'>
+      <section id='faqs' className='max-w-screen-xl grid-cols-1 text-left'>
         <div className='mt-16 flex flex-col content-center items-center'>
           <h1 className='font-semibold leading-8 uppercase text-3xl text-color-secondary'>
             {texts['faq.sectionTitle']}
