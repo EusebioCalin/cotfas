@@ -12,7 +12,8 @@ export const GetStarted = () => {
           {text['content.text4']}
         </h1>
         <div className='text-xl'>
-          <Button text={'Get started'} onClick={() => {}} />
+          {/* <Button text={'Get started'} onClick={() => {}} /> */}
+          🚧 Work in progress 🚧
         </div>
       </div>
     </div>
