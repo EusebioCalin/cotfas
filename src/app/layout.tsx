@@ -12,8 +12,17 @@ const oxanium = Oxanium({
 })
 
 export const metadata: Metadata = {
-  title: 'Andrei Cotfas',
-  description: 'Personal trainer',
+  title: 'Andrei Cotfas - Personal Trainer',
+  description: 'Andrei Cotfas - Personal Training Program. Unlock Your Potential and Move Better for Life',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-32x32.png',
+    apple: '/apple-touch-icon.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/apple-touch-icon.png',
+    },
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
