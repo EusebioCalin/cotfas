@@ -15,7 +15,7 @@ export const Coaching = async () => {
       <section id='coaching' className='max-w-screen-xl px-6'>
         <div className='mt-16 flex flex-col content-center items-center'>
           <h1 className='font-semibold leading-8 uppercase text-3xl text-color-secondary'>
-            {texts['coaching.sectionTitle']}
+            {texts['coaching.title']}
           </h1>
           <div className='grid grid-cols-1 lg:grid-cols-2 mt-8 gap-8 place-items-center'>
             <Image
@@ -27,7 +27,12 @@ export const Coaching = async () => {
               placeholder='blur'
               blurDataURL={base64}
             />
-            <ul className='text-xl list-disc px-6 md:px-0'>{faqItems}</ul>
+            <div>
+              <div className='font-semibold uppercase text-xl text-color-secondary text-center md:text-left mb-4'>
+                {texts['coaching.sectionTitle']}
+              </div>
+              <ul className='text-xl list-disc px-6 md:px-0'>{faqItems}</ul>
+            </div>
           </div>
         </div>
       </section>

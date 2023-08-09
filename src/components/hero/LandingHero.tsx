@@ -11,6 +11,7 @@ export const LandingHero = async ({ text }: { text: string }) => {
       <div className={`relative min-h-screen w-full ${styles.imageClipPath}`}>
         <div className='fixed h-full w-full'>
           <Image
+            unoptimized
             priority
             src={img}
             alt='Andrei Cotfas'
