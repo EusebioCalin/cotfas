@@ -14,8 +14,9 @@ export const NavigationCarouselCard = async ({
 
   return (
     <div className='flex flex-col items-center justify-center w-full md:w-2/3 m-auto text-center relative mb-4'>
-      <h1 className='font-semibold leading-8 text-center uppercase text-3xl mb-4'>{title}</h1>
-
+      {title && (
+        <h1 className='font-semibold leading-8 text-center uppercase text-3xl mb-4'>{title}</h1>
+      )}
       <Image
         src={img}
         width={500}
@@ -24,7 +25,6 @@ export const NavigationCarouselCard = async ({
         placeholder='blur'
         blurDataURL={base64}
       />
-
       <p className='text-xl text-center my-4'>{text}</p>
     </div>
   )

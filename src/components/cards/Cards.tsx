@@ -1,7 +1,6 @@
 import Card from '@/components/card/Card'
-import Carousel from '@/components/carousel/Carousel'
+import CardCarousel from '@/components/cardCarousel/CardCarousel'
 import texts from '@/utils/en-US.json'
-import NavigationCarouselCard from '@/components/card/NavigationCarouselCard'
 
 const carouselData = [
   {
@@ -31,16 +30,6 @@ const carouselData = [
   },
 ]
 
-const carouselCards = carouselData.map((elem) => (
-  <NavigationCarouselCard
-    key={elem.title}
-    //@ts-ignore
-    title={texts[elem.title]}
-    //@ts-ignore
-    text={texts[elem.text]}
-    image={elem.image}
-  />
-))
 const Cards = () => {
   return (
     <section className='max-w-screen-xl px-6 lg:px-0 leading-8'>
@@ -79,7 +68,7 @@ const Cards = () => {
       </div>
       {/* small screen */}
       <div className='lg:hidden mt-8 grid grid-cols-1 place-items-center'>
-        <Carousel data={carouselCards} />
+        <CardCarousel data={carouselData} />
       </div>
     </section>
   )

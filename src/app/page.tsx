@@ -6,6 +6,7 @@ import text from '@/utils/en-US.json'
 import Coaching from '@/components/coaching/Coaching'
 import FAQ from '@/components/FAQ/FAQ'
 import SecondaryHero from '@/components/secondaryHero/SecondaryHero'
+import FitrApp from '@/components/fitrApp/FitrApp'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Content />
       <SecondaryHero text={text['hero.text2']} />
       <Cards />
+      <FitrApp />
       <Testimonials />
       <Coaching />
       <FAQ />
