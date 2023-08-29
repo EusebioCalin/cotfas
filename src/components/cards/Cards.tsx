@@ -1,4 +1,4 @@
-import Card from '@/components/card/Card'
+import Card from '@/components/card/BasicCard'
 import texts from '@/utils/en-US.json'
 import CardCarousel from '../cardCarousel/CardCarousel'
 
