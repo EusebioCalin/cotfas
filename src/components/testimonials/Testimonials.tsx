@@ -1,6 +1,6 @@
 import texts from '@/utils/en-US.json'
 import Carousel from '@/components/carousel/Carousel'
-import TestimonialCardsCarouselCard from '../card/TestimonialCarouselCard'
+import TestimonialCardsCarouselCard from '../card/TestimonialsCarouselCard'
 
 const Testimonials = () => {
   const testimonials = Object.keys(texts).filter((t) => t.includes('testimonials.text'))
