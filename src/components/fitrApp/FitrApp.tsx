@@ -3,28 +3,28 @@ import texts from '@/utils/en-US.json'
 
 const carouselData = [
   {
-    image: '/images/app_1.png',
+    image: '/images/app_1.jpeg',
     imageDimensions: {
       height: 300,
       width: 300,
     },
   },
   {
-    image: '/images/app_2.png',
+    image: '/images/app_2.jpeg',
     imageDimensions: {
       height: 300,
       width: 300,
     },
   },
   {
-    image: '/images/app_3.png',
+    image: '/images/app_3.jpeg',
     imageDimensions: {
       height: 300,
       width: 300,
     },
   },
   {
-    image: '/images/app_4.png',
+    image: '/images/app_4.jpeg',
     imageDimensions: {
       height: 300,
       width: 300,
