@@ -1,6 +1,6 @@
 import Carousel from '@/components/carousel/Carousel'
 import texts from '@/utils/en-US.json'
-import CarouselCard from '../card/CarouselCard'
+import CarouselCard from '@/components/card/NavigationCarouselCard'
 
 interface IPTCardCarousel {
   data: Array<{
