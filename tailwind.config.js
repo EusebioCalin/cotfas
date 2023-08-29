@@ -21,12 +21,7 @@ module.exports = {
           'box-shadow: 1px 1px 20px 0px rgba(255, 255, 255, .9), 1px 1px 5px 0px rgba(255, 255, 255, .9), 7px 7px 20px 0px rgba(0, 0, 0, .2), 4px 4px 5px 0px rgba(0, 0, 0, .3);',
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'hero-image': "url('/images/hero11.jpg')",
-        'hero2-image': "url('/images/hero22.jpg')",
-        'card-pattern':
-          "linear-gradient(to right bottom, rgba('#7ed56f',0.8), rgba('#28b485',0.8)), url('/images/h1_hero.jpg')",
+        'primary-darker': 'linear-gradient(rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3))',
       },
       colors: {
         'color-primary': 'var(--color-primary)',

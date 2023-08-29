@@ -1,6 +1,7 @@
 'use client'
 import Button from '@/components/button/Button'
 import text from '@/utils/en-US.json'
+import Link from 'next/link'
 
 export const GetStarted = () => {
   return (
@@ -12,8 +13,9 @@ export const GetStarted = () => {
           {text['content.text4']}
         </h1>
         <div className='text-xl'>
-          {/* <Button text={'Get started'} onClick={() => {}} /> */}
-          🚧 Work in progress 🚧
+          <Link href='https://app.fitr.training/p/peakmotion' target='_blank'>
+            <Button text={'Get Started'} onClick={() => {}} />
+          </Link>
         </div>
       </div>
     </div>

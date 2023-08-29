@@ -1,22 +1,26 @@
+import { getImage } from '@/utils/utils'
 import Image from 'next/image'
 
-export const TestimonialCardsCarouselCard = ({
+export const TestimonialCardsCarouselCard = async ({
   text,
   image,
   clientName,
 }: {
   text: string
-  image?: string
+  image: string
   clientName: string
 }) => {
+  const { base64, img } = await getImage(`/images/${image}`)
   return (
     <div className='flex flex-col items-center justify-start my-8 h-full'>
       <div className={'rounded-full overflow-hidden'}>
         <Image
-          src={!!image ? `/images/${image}` : '/images/profile_icon.png'}
+          src={img}
           height={100}
           width={100}
-          alt='client_profile_picture'
+          placeholder='blur'
+          blurDataURL={base64}
+          alt='testiomonials Andrei Cotfas'
         />
       </div>
 

@@ -5,10 +5,15 @@ export const NavigationCarouselCard = async ({
   title,
   text,
   image,
+  imageDimensions,
 }: {
   title: string
   text: string
   image: string
+  imageDimensions?: {
+    width: number
+    height: number
+  }
 }) => {
   const { base64, img } = await getImage(image)
 
@@ -19,8 +24,8 @@ export const NavigationCarouselCard = async ({
       )}
       <Image
         src={img}
-        width={500}
-        height={500}
+        width={imageDimensions?.width || 500}
+        height={imageDimensions?.height || 500}
         alt='Andrei Cotfas'
         placeholder='blur'
         blurDataURL={base64}

@@ -3,7 +3,12 @@ import CarouselCard from '@/components/card/CarouselCard'
 import texts from '@/utils/en-US.json'
 
 interface IPTCardCarousel {
-  data: Array<{ title?: string; text?: string; image: string }>
+  data: Array<{
+    title?: string
+    text?: string
+    image: string
+    imageDimensions?: { width: number; height: number }
+  }>
 }
 
 const PersonalTrainingCardCarousel = ({ data }: IPTCardCarousel) => {
@@ -15,6 +20,7 @@ const PersonalTrainingCardCarousel = ({ data }: IPTCardCarousel) => {
       //@ts-ignore
       text={texts[elem.text]}
       image={elem.image}
+      imageDimensions={elem.imageDimensions}
     />
   ))
 
