@@ -1,7 +1,7 @@
 'use client'
-import Button from '@/components/button/AppButton'
 import text from '@/utils/en-US.json'
 import Link from 'next/link'
+import Button from '../button/AppButton'
 
 export const GetStarted = () => {
   return (
