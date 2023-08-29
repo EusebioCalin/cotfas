@@ -46,7 +46,7 @@ const FitrApp = async () => {
         </h1>
         <div className='grid grid-cols-1 lg:grid-cols-2 mt-8 gap-8 place-items-center'>
           <div className='px-6'>
-            <div className='text-xl text-center mb-4'>{texts['fitr.text']}</div>
+            <div className='text-xl text-center md:text-left mb-4'>{texts['fitr.text']}</div>
             <div className='font-semibold uppercase text-xl text-color-secondary text-center md:text-left mb-4'>
               {texts['fitr.listText']}
             </div>
