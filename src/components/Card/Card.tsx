@@ -7,7 +7,7 @@ const Card = async ({ title, text, image }: { title: string; text: string; image
   const { base64, img } = await getImage(image)
 
   return (
-    <div className={cn(styles.card, `w-10/12 md:w-full min-h-[400px] bg-cover bg-center relative`)}>
+    <div className={cn(styles.card, 'w-10/12 md:w-full min-h-[400px] bg-cover bg-center relative')}>
       <Image
         priority
         src={img}

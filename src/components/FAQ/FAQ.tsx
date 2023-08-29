@@ -10,9 +10,9 @@ export const FAQ = () => {
   const disclosureElements = faqItems.map((item, index) => (
     <Disclosure key={item} as='div' className={' pb-4'}>
       {({ open }) => {
-        //@ts-ignore
+        // @ts-expect-error : text exists
         const title = texts[item]
-        //@ts-ignore
+        // @ts-expect-error : text exists
         const text = texts[`faq.text${index + 1}`]
         return (
           <>

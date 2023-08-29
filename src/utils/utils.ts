@@ -1,4 +1,4 @@
-import { getPlaiceholder } from "plaiceholder"
+import { getPlaiceholder } from 'plaiceholder'
 
 export const getImage = async (src: string) => {
   const buffer = await fetch(`${process.env.URL}${src}`).then(async (res) =>

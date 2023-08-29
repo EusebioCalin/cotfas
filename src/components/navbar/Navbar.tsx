@@ -7,7 +7,7 @@ const Navbar = () => {
   const navigation = ['Coaching', 'FAQS', 'Contact']
   const [scrollPosition, setScrollPosition] = useState<number>(0)
 
-  const handleScroll = (event: Event) => {
+  const handleScroll = () => {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
     const scrolled = winScroll / height

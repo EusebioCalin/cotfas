@@ -1,5 +1,4 @@
 import CardCarousel from '@/components/cardCarousel/CardCarousel'
-import { getImage } from '@/utils/utils'
 import texts from '@/utils/en-US.json'
 
 const carouselData = [
@@ -34,11 +33,9 @@ const carouselData = [
 ]
 
 export const FitrApp = async () => {
-  const { base64, img } = await getImage('/images/coaching-mobile.jpg')
-
   const faqItems = Object.keys(texts)
     .filter((t) => t.includes('fitr.listItem'))
-    //@ts-ignore
+    // @ts-expect-error : text exists
     .map((elem, id) => <li key={id}>{texts[elem]}</li>)
 
   return (

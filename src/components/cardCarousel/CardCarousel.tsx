@@ -15,9 +15,9 @@ const PersonalTrainingCardCarousel = ({ data }: IPTCardCarousel) => {
   const carouselCards = data.map((elem) => (
     <CarouselCard
       key={elem.title}
-      //@ts-ignore
+      // @ts-expect-error : text exists
       title={texts[elem.title]}
-      //@ts-ignore
+      // @ts-expect-error : text exists
       text={texts[elem.text]}
       image={elem.image}
       imageDimensions={elem.imageDimensions}

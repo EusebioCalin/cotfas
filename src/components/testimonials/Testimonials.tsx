@@ -8,11 +8,11 @@ export const Testimonials = () => {
   const carouselCards = testimonials.map((elem, index) => (
     <TestimonialCardsCarouselCard
       key={`index_${elem}`}
-      //@ts-ignore
+      // @ts-expect-error: the text exists
       clientName={texts[`testimonials.name${index + 1}`]}
-      //@ts-ignore
+      // @ts-expect-error: the text exists
       text={texts[elem]}
-      //@ts-ignore
+      // @ts-expect-error: the text exists
       image={texts[`testimonials.picture${index + 1}`]}
     />
   ))

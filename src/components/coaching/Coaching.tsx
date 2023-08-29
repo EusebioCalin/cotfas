@@ -7,7 +7,7 @@ export const Coaching = async () => {
 
   const faqItems = Object.keys(texts)
     .filter((t) => t.includes('coaching.text'))
-    //@ts-ignore
+    // @ts-expect-error : text exists
     .map((elem, id) => <li key={id}>{texts[elem]}</li>)
 
   return (

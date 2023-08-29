@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { getImage } from '@/utils/utils'
 
 const imageSrc = '/images/hero2.jpg'
-const mobileImageSrc = '/images/hero2-mobile.jpg'
 
 export const SecondaryHero = async ({ text }: { text: string }) => {
   const { base64, img } = await getImage(imageSrc)
