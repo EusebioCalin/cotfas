@@ -1,7 +1,7 @@
 'use client'
 import { Disclosure } from '@headlessui/react'
 import { useEffect, useState } from 'react'
-import Button from '@/components/button/Button'
+import Button from '@/components/button/AppButton'
 
 const Navbar = () => {
   const navigation = ['Coaching', 'FAQS', 'Contact']

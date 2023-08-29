@@ -5,7 +5,7 @@ import { getImage } from '@/utils/utils'
 
 const imageSrc = '/images/hero2.jpg'
 
-export const SecondaryHero = async ({ text }: { text: string }) => {
+const SecondaryHero = async ({ text }: { text: string }) => {
   const { base64, img } = await getImage(imageSrc)
 
   return (

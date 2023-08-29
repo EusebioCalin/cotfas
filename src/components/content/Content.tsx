@@ -3,7 +3,7 @@ import text from '@/utils/en-US.json'
 import { getImage } from '@/utils/utils'
 import { GetStarted } from './GetStarted'
 
-export const Content = async () => {
+const Content = async () => {
   const [imageData1, imageData2] = await Promise.all([
     getImage('/images/gallery_1.jpg'),
     getImage('/images/gallery_2.jpg'),

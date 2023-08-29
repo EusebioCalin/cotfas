@@ -6,7 +6,7 @@ import texts from '@/utils/en-US.json'
 
 const faqItems = Object.keys(texts).filter((t) => t.includes('faq.title'))
 
-export const FAQ = () => {
+const FAQ = () => {
   const disclosureElements = faqItems.map((item, index) => (
     <Disclosure key={item} as='div' className={' pb-4'}>
       {({ open }) => {

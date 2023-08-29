@@ -1,6 +1,6 @@
 import Card from '@/components/card/Card'
-import CardCarousel from '@/components/cardCarousel/CardCarousel'
 import texts from '@/utils/en-US.json'
+import CardCarousel from '../cardCarousel/CardCarousel'
 
 const carouselData = [
   {

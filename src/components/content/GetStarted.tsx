@@ -1,5 +1,5 @@
 'use client'
-import Button from '@/components/button/Button'
+import Button from '@/components/button/AppButton'
 import text from '@/utils/en-US.json'
 import Link from 'next/link'
 

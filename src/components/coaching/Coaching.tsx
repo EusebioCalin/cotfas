@@ -2,7 +2,7 @@ import texts from '@/utils/en-US.json'
 import Image from 'next/image'
 import { getImage } from '@/utils/utils'
 
-export const Coaching = async () => {
+const Coaching = async () => {
   const { base64, img } = await getImage('/images/coaching-mobile.jpg')
 
   const faqItems = Object.keys(texts)

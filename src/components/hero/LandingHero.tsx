@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { getImage } from '@/utils/utils'
 
 const imageSrc = '/images/hero1.jpg'
-export const LandingHero = async ({ text }: { text: string }) => {
+const LandingHero = async ({ text }: { text: string }) => {
   const { base64, img } = await getImage(imageSrc)
   return (
     <section className='w-full text-left text-white'>

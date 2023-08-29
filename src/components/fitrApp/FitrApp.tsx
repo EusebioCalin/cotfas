@@ -32,7 +32,7 @@ const carouselData = [
   },
 ]
 
-export const FitrApp = async () => {
+const FitrApp = async () => {
   const faqItems = Object.keys(texts)
     .filter((t) => t.includes('fitr.listItem'))
     // @ts-expect-error : text exists
